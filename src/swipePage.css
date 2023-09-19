@@ -60,12 +60,12 @@ main{
 
 .slideRight{
   animation-name: swipeRight;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
 }
 
 .slideLeft{
-  animation-name: slideLeft;
-  animation-duration: 2s;
+  animation-name: swipeLeft;
+  animation-duration: 1.5s;
 }
 
 .company-card {
