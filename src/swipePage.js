@@ -1,10 +1,24 @@
 import { wait } from '@testing-library/user-event/dist/utils';
 import logo from './logo.svg';
 import './swipePage.css';
-import CompanyCard from "./components/CompanyCard"
-import { ReactDOM } from 'react';
+import React from "react";
+import CompanyCard from "./components/CompanyCard";
 
 function SwipePage() {
+  let [card, setCard] = React.useState(<CompanyCard/>);
+
+  function spawnCard() {
+    let paragraph = document.getElementById('cCard');
+    paragraph.classList.add('slideRight');
+    setTimeout(function(){
+      setCard(<CompanyCard/>)
+    }, 1900);
+  }
+  
+  React.useEffect(() => {
+
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
@@ -13,15 +27,8 @@ function SwipePage() {
         <div id='skills_placeholder'>
           <p>This is a skills_placeholder</p>
         </div>
-        <div id='swipe_space' onClick={() => {
-          let paragraph = document.getElementById('cCard');
-          paragraph.classList.add('slideRight');
-          setTimeout(function(){
-            paragraph.style.opacity = '0%';
-          }, 1900);
-          ReactDOM.render(<CompanyCard/>, document.getElementById("swipe_space"))
-        }}>
-          <CompanyCard/>
+        <div id="card-div" onClick={spawnCard}>
+          {card}
         </div>
         <div id='select_site'>
           <p>
