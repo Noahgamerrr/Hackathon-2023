@@ -1,6 +1,6 @@
 function CompanyCard(props) {
     return (
-        <div class="company-card">
+        <div class="company-card" id='cCard'>
             <h1 class="company-name">Company Name</h1>
             <img src="/logo512.png" class="company-logo" alt=""/>
             <h3>Desired skills:</h3>
