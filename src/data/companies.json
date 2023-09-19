@@ -23,24 +23,24 @@
     },
     {
         "id": 3,
-        "position": "Consultant",
+        "position": "Cloud manager",
         "img": "eviden.png",
         "desired-skills": [
-            "accounting",
-            "customer service",
-            "good mood",
-            "patient"
+            "Cloud-Computing",
+            "cyber-security",
+            "curious",
+            "AI"
         ]
     },
     {
-        "id": 2,
+        "id": 4,
         "position": "Consultant",
-        "img": "sparkasse-kärnten.jpg",
+        "img": "hasslacher.png",
         "desired-skills": [
-            "accounting",
-            "customer service",
-            "good mood",
-            "patient"
+            "woodcraft",
+            "teamwork",
+            "internationality",
+            "curious"
         ]
     }
 ]

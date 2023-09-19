@@ -5,15 +5,17 @@ import CompanyCard from "./components/CompanyCard";
 
 function SwipePage() {
   let companiesElems = companies.map(comp => <CompanyCard item={comp}/>);
-  let currentCard = 0;
-  let [card, setCard] = React.useState(companiesElems[currentCard]);
+  let currentCard = React.useRef(0);
+  let [card, setCard] = React.useState(companiesElems[currentCard.current]);
+
+  React.useEffect(() => {}, [])
 
   function spawnCard() {
     let paragraph = document.getElementById('cCard');
     paragraph.classList.add('slideRight');
     setTimeout(function(){
-      currentCard++;
-      setCard(companiesElems[currentCard]);
+      currentCard.current++;
+      setCard(companiesElems[currentCard.current]);
       paragraph.classList.remove('slideRight');
     }, 1900);
   }
