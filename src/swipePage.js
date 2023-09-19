@@ -2,28 +2,29 @@ import { wait } from '@testing-library/user-event/dist/utils';
 import logo from './logo.svg';
 import './swipePage.css';
 import React from "react";
+import companies from "./data/companies.json"
 import CompanyCard from "./components/CompanyCard";
 
 function SwipePage() {
-  let [card, setCard] = React.useState(<CompanyCard/>);
+  let companiesElems = companies.map(comp => <CompanyCard item={comp}/>);
+  let currentCard = 0;
+  let [card, setCard] = React.useState(companiesElems[currentCard]);
 
   function spawnCard() {
     let paragraph = document.getElementById('cCard');
     paragraph.classList.add('slideRight');
     setTimeout(function(){
-      setCard(<CompanyCard/>)
+      currentCard++;
+      setCard(companiesElems[currentCard]);
+      paragraph.classList.remove('slideRight');
     }, 1900);
   }
-  
-  React.useEffect(() => {
-
-  }, [])
 
   return (
     <div className="App">
       <header className="App-header">
       </header>
-      <body>
+      <main>
         <div id='skills_placeholder'>
           <p>This is a skills_placeholder</p>
         </div>
@@ -35,7 +36,7 @@ function SwipePage() {
             This is the select_site
           </p>
         </div>
-      </body>
+      </main>
     </div>
   );
 }

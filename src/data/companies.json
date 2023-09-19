@@ -1,10 +1,46 @@
 [
     {
         "id": 1,
-        "name": "Kelag",
+        "position": "Data Analysist",
         "img": "kelag.png",
         "desired-skills": [
-            ""
+            "energy-supply",
+            "sql",
+            "python",
+            "teamwork"
+        ]
+    },
+    {
+        "id": 2,
+        "position": "Consultant",
+        "img": "sparkasse-kärnten.jpg",
+        "desired-skills": [
+            "accounting",
+            "customer service",
+            "good mood",
+            "patient"
+        ]
+    },
+    {
+        "id": 3,
+        "position": "Consultant",
+        "img": "eviden.png",
+        "desired-skills": [
+            "accounting",
+            "customer service",
+            "good mood",
+            "patient"
+        ]
+    },
+    {
+        "id": 2,
+        "position": "Consultant",
+        "img": "sparkasse-kärnten.jpg",
+        "desired-skills": [
+            "accounting",
+            "customer service",
+            "good mood",
+            "patient"
         ]
     }
 ]
