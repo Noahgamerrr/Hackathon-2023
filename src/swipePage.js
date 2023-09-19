@@ -1,6 +1,8 @@
 import { wait } from '@testing-library/user-event/dist/utils';
 import logo from './logo.svg';
 import './swipePage.css';
+import CompanyCard from "./components/CompanyCard"
+import { ReactDOM } from 'react';
 
 function SwipePage() {
   return (
@@ -12,16 +14,14 @@ function SwipePage() {
           <p>This is a skills_placeholder</p>
         </div>
         <div id='swipe_space' onClick={() => {
-          let paragraph = document.getElementById('companySlide');
+          let paragraph = document.getElementById('cCard');
           paragraph.classList.add('slideRight');
           setTimeout(function(){
             paragraph.style.opacity = '0%';
           }, 1900);
-          
+          ReactDOM.render(<CompanyCard/>, document.getElementById("swipe_space"))
         }}>
-          <p id='companySlide'>
-            This is the swipe_space
-          </p>
+          <CompanyCard/>
         </div>
         <div id='select_site'>
           <p>
