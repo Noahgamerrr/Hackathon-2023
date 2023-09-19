@@ -3,7 +3,7 @@
   margin: 0px;
 }
 
-body{
+main{
   height: 1280px;
   width: 720px;
 }
@@ -28,7 +28,7 @@ body{
 
 #select_site{
   background-color: gray;
-  height: 60px;
+  height: 5%;
   width: 100%;
 }
 
@@ -42,6 +42,16 @@ body{
   }
 }
 
+@keyframes swipeLeft{
+  from {
+    left: 130px;
+  }
+  
+  to{
+    left: -460px;
+  }
+}
+
 #companySlide{
   width: 50px;
   position: relative;
@@ -50,6 +60,11 @@ body{
 
 .slideRight{
   animation-name: swipeRight;
+  animation-duration: 2s;
+}
+
+.slideLeft{
+  animation-name: slideLeft;
   animation-duration: 2s;
 }
 
@@ -103,6 +118,8 @@ body{
   margin-top: 7px;
   float: right;
   margin-right: 300px;
+  background-color: lightgray;
+  border: none;
 }
 
 #decline-button{
@@ -111,6 +128,8 @@ body{
   padding: 0px;
   margin-top: 7px;
   margin-left: 300px;
+  background-color: lightgrey;
+  border: none;
 }
 
 .imageClass{
