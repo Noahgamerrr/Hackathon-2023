@@ -29,6 +29,10 @@ function SwipePage() {
         <div id="card-div" onClick={spawnCard}>
           {card}
         </div>
+        <div id='buttons'>
+          <button type='button' id='decline-button'><img src='./assets/images/decline.png' width='40px' height='40px' class='imageClass' alt='avatar'></img></button>
+          <button type='button' id='accept-button'><img src='./assets/images/hakchen.png' width='40px' height='40px' class='imageClass' alt='avatar'></img></button>
+        </div>
         <div id='select_site'>
           <img src='./assets/images/benutzer-avatar.png' width='50px' height='50px' alt='avatar' id='avatar-icon'></img>
           <img src='./assets/images/plaudern.png' width='50px' height='50px' alt='avatar' id='chat-icon'></img>

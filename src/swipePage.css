@@ -14,9 +14,15 @@ body{
   width: 100%;
 }
 
-#swipe_space{
+#card-div{
   background-color: lightgray;
-  height: 90%;
+  height: 85%;
+  width: 100%;
+}
+
+#buttons{
+  background-color: lightgray;
+  height: 5%;
   width: 100%;
 }
 
@@ -88,4 +94,25 @@ body{
   margin: 5px;
   margin-right: 300px;
   float: right;
+}
+
+#accept-button{
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+  margin-top: 7px;
+  float: right;
+  margin-right: 300px;
+}
+
+#decline-button{
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+  margin-top: 7px;
+  margin-left: 300px;
+}
+
+.imageClass{
+  margin: auto;
 }
