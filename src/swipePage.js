@@ -1,5 +1,3 @@
-import { wait } from '@testing-library/user-event/dist/utils';
-import logo from './logo.svg';
 import './swipePage.css';
 import CompanyCard from "./components/CompanyCard"
 import { ReactDOM } from 'react';
@@ -11,7 +9,8 @@ function SwipePage() {
       </header>
       <body>
         <div id='skills_placeholder'>
-          <p>This is a skills_placeholder</p>
+        <img src='./assets/images/dollar-wahrungszeichen.png' width='50px' height='50px' alt='avatar' id='avatar-icon'></img>
+        <img src='./assets/images/computer-science.png' width='50px' height='50px' alt='avatar' id='chat-icon'></img>
         </div>
         <div id='swipe_space' onClick={() => {
           let paragraph = document.getElementById('cCard');
@@ -24,9 +23,8 @@ function SwipePage() {
           <CompanyCard/>
         </div>
         <div id='select_site'>
-          <p>
-            This is the select_site
-          </p>
+          <img src='./assets/images/benutzer-avatar.png' width='50px' height='50px' alt='avatar' id='avatar-icon'></img>
+          <img src='./assets/images/plaudern.png' width='50px' height='50px' alt='avatar' id='chat-icon'></img>
         </div>
       </body>
     </div>

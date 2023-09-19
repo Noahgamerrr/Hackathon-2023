@@ -22,19 +22,17 @@ body{
 
 #select_site{
   background-color: gray;
-  height: 5%;
+  height: 60px;
   width: 100%;
 }
 
 @keyframes swipeRight{
   from {
     left: 130px;
-    top: 0px;
   }
   
   to{
     left: 100%;
-    top: 0px;
   }
 }
 
@@ -52,12 +50,12 @@ body{
 .company-card {
   position: relative;
   left: 130px;
+  top: 60px;
   width: 460px;
-  height: 80vh;
+  height: 1000px;
   padding: 2%;
   box-shadow: 1px 1px 5px gray;
   border-radius: 2%;
-  margin-top: 10vh;
 }
 
 .company-logo {
@@ -79,4 +77,15 @@ body{
 .trophy {
   width: 50%;
   margin: auto;
+}
+
+#avatar-icon{
+  margin: 5px;
+  margin-left: 300px;
+}
+
+#chat-icon{
+  margin: 5px;
+  margin-right: 300px;
+  float: right;
 }
