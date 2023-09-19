@@ -10,6 +10,10 @@ function CompanyCard(props) {
                 <img src="/assets/images/trophy.png" class="trophy" alt=""/>
                 <img src="/assets/images/trophy.png" class="trophy" alt=""/>
                 <img src="/assets/images/trophy.png" class="trophy" alt=""/>
+                <img src="/assets/images/trophy.png" class="trophy" alt=""/>
+                <img src="/assets/images/trophy.png" class="trophy" alt=""/>
+                <img src="/assets/images/trophy.png" class="trophy" alt=""/>
+                <img src="/assets/images/trophy.png" class="trophy" alt=""/>
             </div>
         </div>
     )
