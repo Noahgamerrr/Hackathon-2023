@@ -7,25 +7,33 @@ function SwipePage() {
   let companiesElems = companies.map(comp => <CompanyCard item={comp}/>);
   let currentCard = React.useRef(0);
   let [card, setCard] = React.useState(companiesElems[currentCard.current]);
-  let fillStep = 100 / companies.length;
-  let [moneyFill, setMoneyFill] = React.useState(0);
+  let skillsFill = React.useRef([0, 0, 0, 0]);
+  const colourCode = ["green", "greenyellow", "yellow", "orange", "red"]
 
   function spawnCard(leftOrRight) {
     let paragraph = document.getElementById('cCard');
     let sign = leftOrRight === "slideRight" ? 1 : -1;
     paragraph.classList.add(leftOrRight);
-    setTimeout(function(){
+    setTimeout(function() {
+      for (let skill in companies[currentCard.current].careerImpact) {
+        skillsFill.current[skill] += companies[currentCard.current].careerImpact[skill] * sign;
+      }
       currentCard.current++;
       setCard(companiesElems[currentCard.current]);
       paragraph.classList.remove(leftOrRight);
-      setMoneyFill(moneyFill + sign * fillStep);
       renderFill();
     }, 1450);
   }
 
   function renderFill() {
-    let filler = document.getElementById("avatar-icon");
-    filler.style.fill = "white";
+    let fillers = document.getElementsByClassName("progress");
+    for (let filler = 0; filler < fillers.length; filler++) {
+      //fillers[filler].style.background = `linear-gradient(to top, ${skillsFill.current[filler] > 0 ? "green" : "red"} ${Math.abs(skillsFill.current[filler])}%, grey ${Math.abs(skillsFill.current[filler])}%, grey 100%)`;
+      let absSkill = 50 - skillsFill.current[filler];
+      let colour = parseInt(absSkill / 20);
+      if (absSkill > 50) fillers[filler].style.background = `linear-gradient(to bottom, grey 0%, grey 50%, ${colourCode[colour]} 50%, ${colourCode[colour]} ${absSkill}%, grey ${absSkill}%, grey 100%)`
+      else fillers[filler].style.background = `linear-gradient(to bottom, grey 0%, grey ${absSkill}%, ${colourCode[colour]} ${absSkill}%, ${colourCode[colour]} 50%, grey 50%, grey 100%)`
+    }
   }
 
 
@@ -36,8 +44,22 @@ function SwipePage() {
       </header>
       <main>
         <div id='skills_placeholder'>
-        <img src='./assets/images/dollar-wahrungszeichen.png' height='60%' alt='avatar' id='avatar-icon'></img>
-        <img src='./assets/images/computer-science.png' height='60%' alt='avatar' id='chat-icon'></img>
+          <div class="img-container">
+            <div class="progress"></div>
+            <img src='./assets/images/career-paths/economics.svg' height="100%" alt='avatar' id='avatar-icon'></img>
+          </div>
+          <div class="img-container">
+            <div class="progress"></div>
+            <img src='./assets/images/career-paths/IT.svg' height="100%" alt='avatar' id='it-icon'></img>
+          </div>
+          <div class="img-container">
+            <div class="progress"></div>
+            <img src='./assets/images/career-paths/social-skills.svg' height="100%" alt='avatar' id='social-icon'></img>
+          </div>
+          <div class="img-container">
+            <div class="progress"></div>
+            <img src='./assets/images/career-paths/engineering.svg' height="100%" alt='avatar' id='engineer-icon'></img>
+          </div>
         </div>
         <div id="card-div">
           {card}
