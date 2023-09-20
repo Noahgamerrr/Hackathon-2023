@@ -21,21 +21,21 @@ main{
 }
 
 #skills_placeholder {
-  background-color: lightgray;
+  background-color: #defcdf;
 }
 
 #select_site {
-  background-color: gray;
+  background-color: #367037;
 }
 
 #card-div{
-  background-color: lightgray;
+  background-color: #defcdf;
   height: 74%;
   width: 100%;
 }
 
 #buttons{
-  background-color: lightgray;
+  background-color: #defcdf;
   height: 10%;
   width: 100%;
 }
@@ -135,14 +135,14 @@ main{
   padding: 0px;
   float: right;
   margin-right: 30%;
-  background-color: lightgray;
+  background-color: #defcdf;
   border: none;
 }
 
 #decline-button{
   padding: 0px;
   margin-left: 30%;
-  background-color: lightgrey;
+  background-color: #defcdf;
   border: none;
 }
 
