@@ -11,11 +11,13 @@ function CompanyCard(props) {
             <img src={"/assets/images/company-logos/" +props.item.img} class="company-logo" alt=""/>
             <h3>Description:</h3>
             <div class="desc">
-                props.item.description
+                {props.item.description}
             </div>
-            <h3>Desired skills:</h3>
-            <div class="trophies">
-                {skillsImgs}
+            <div class="desired-div">
+                <h3>Desired skills:</h3>
+                <div class="trophies">
+                    {skillsImgs}
+                </div>
             </div>
             <div id='description space'>
             </div>

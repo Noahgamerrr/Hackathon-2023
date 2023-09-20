@@ -136,6 +136,11 @@ main{
   border: none;
 }
 
+.desired-div {
+  position: absolute;
+  bottom: 10%
+}
+
 .imageClass{
   margin: auto;
 }
