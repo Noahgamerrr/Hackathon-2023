@@ -3,9 +3,13 @@
   margin: 0px;
 }
 
+.App {
+  height: 100vh;
+}
+
 main{
-  height: 1080px;
-  width: 720px;
+  height: 100%;
+  width: 30%;
 }
 
 #skills_placeholder{
@@ -16,13 +20,13 @@ main{
 
 #card-div{
   background-color: lightgray;
-  height: 76%;
+  height: 74%;
   width: 100%;
 }
 
 #buttons{
   background-color: lightgray;
-  height: 8%;
+  height: 10%;
   width: 100%;
 }
 
@@ -34,7 +38,7 @@ main{
 
 @keyframes swipeRight{
   from {
-    left: 130px;
+    left: 10%;
   }
   
   to{
@@ -44,11 +48,11 @@ main{
 
 @keyframes swipeLeft{
   from {
-    left: 130px;
+    left: 10%;
   }
   
   to{
-    left: -460px;
+    left: -100%;
   }
 }
 
@@ -70,10 +74,10 @@ main{
 
 .company-card {
   position: relative;
-  left: 130px;
-  top: 60px;
-  width: 460px;
-  height: 720px;
+  left: 10%;
+  top: 5%;
+  width: 80%;
+  height: 90%;
   padding: 2%;
   box-shadow: 1px 1px 5px gray;
   border-radius: 2%;
@@ -101,33 +105,33 @@ main{
 }
 
 #avatar-icon{
-  margin: 5px;
-  margin-left: 300px;
+  margin: 2.5%;
+  margin-left: 20%;
 }
 
 #chat-icon{
-  margin: 5px;
-  margin-right: 300px;
+  margin: 2.5%;
+  margin-right: 20%;
   float: right;
 }
 
 #accept-button{
-  height: 50px;
-  width: 50px;
+  height: 70%;
+  width: 10%;
   padding: 0px;
-  margin-top: 7px;
   float: right;
-  margin-right: 300px;
+  margin-right: 30%;
+  margin-top: 2%;
   background-color: lightgray;
   border: none;
 }
 
 #decline-button{
-  height: 50px;
-  width: 50px;
+  height: 70%;
+  width: 10%;
   padding: 0px;
-  margin-top: 7px;
-  margin-left: 300px;
+  margin-left: 30%;
+  margin-top: 2%;
   background-color: lightgrey;
   border: none;
 }

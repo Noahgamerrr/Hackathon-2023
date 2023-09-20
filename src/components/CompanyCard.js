@@ -13,6 +13,8 @@ function CompanyCard(props) {
             <div class="trophies">
                 {skillsImgs}
             </div>
+            <div id='description space'>
+            </div>
         </div>
     )
 }
