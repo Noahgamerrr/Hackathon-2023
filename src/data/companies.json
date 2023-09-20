@@ -9,7 +9,8 @@
             "sql",
             "python",
             "teamwork"
-        ]
+        ],
+        "careerImpact": [0, 15, 10, 5]
     },
     {
         "id": 2,
@@ -21,7 +22,8 @@
             "customer-service",
             "IT",
             "social"
-        ]
+        ],
+        "careerImpact": [15, 5, 25, 0]
     },
     {
         "id": 3,
@@ -33,7 +35,8 @@
             "cyber-security",
             "curious",
             "AI"
-        ]
+        ],
+        "careerImpact": [0, 25, 5, 10]
     },
     {
         "id": 4,
@@ -45,6 +48,7 @@
             "teamwork",
             "internationality",
             "curious"
-        ]
+        ],
+        "careerImpact": [5, 0, 20, 15]
     }
 ]
