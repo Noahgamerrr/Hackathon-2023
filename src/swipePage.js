@@ -8,9 +8,11 @@ function SwipePage() {
   let currentCard = React.useRef(0);
   let [card, setCard] = React.useState(companiesElems[currentCard.current]);
   let skillsFill = React.useRef([0, 0, 0, 0]);
-  const colourCode = ["green", "greenyellow", "yellow", "orange", "red"]
+  const colourCode = ["green", "greenyellow", "yellow", "orange", "red"];
+  let clickable = React.useRef(true);
 
   function spawnCard(leftOrRight) {
+    clickable.current = false;
     let paragraph = document.getElementById('cCard');
     let sign = leftOrRight === "slideRight" ? 1 : -1;
     paragraph.classList.add(leftOrRight);
@@ -22,6 +24,7 @@ function SwipePage() {
       setCard(companiesElems[currentCard.current]);
       paragraph.classList.remove(leftOrRight);
       renderFill();
+      clickable.current = true;
     }, 1450);
   }
 
@@ -65,8 +68,8 @@ function SwipePage() {
           {card}
         </div>
         <div id='buttons'>
-          <button type='button' id='decline-button' onClick={() => spawnCard("slideLeft")}><img src='./assets/images/thumbs_down.png' width='60px' height='60px' class='imageClass' alt='avatar'></img></button>
-          <button type='button' id='accept-button' onClick={() => spawnCard("slideRight")}><img src='./assets/images/icons8-daumen-hoch-96.png' width='60px' height='60px' class='imageClass' alt='avatar'></img></button>
+          <button type='button' id='decline-button' onClick={() => clickable.current && spawnCard("slideLeft")}><img src='./assets/images/thumbs_down.png' width='60px' height='60px' class='imageClass' alt='avatar'></img></button>
+          <button type='button' id='accept-button' onClick={() => clickable.current && spawnCard("slideRight")}><img src='./assets/images/icons8-daumen-hoch-96.png' width='60px' height='60px' class='imageClass' alt='avatar'></img></button>
         </div>
         <div id='select_site'>
           <img src='./assets/images/benutzer-avatar.png' width='50px' height='50px' alt='avatar' id='avatar-icon'></img>
