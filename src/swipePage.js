@@ -7,18 +7,25 @@ function SwipePage() {
   let companiesElems = companies.map(comp => <CompanyCard item={comp}/>);
   let currentCard = React.useRef(0);
   let [card, setCard] = React.useState(companiesElems[currentCard.current]);
-  let countCompanies = companies.length;
+  let fillStep = 100 / companies.length;
   let [moneyFill, setMoneyFill] = React.useState(0);
 
   function spawnCard(leftOrRight) {
     let paragraph = document.getElementById('cCard');
-    let positive = leftOrRight == "slideRight";
+    let sign = leftOrRight === "slideRight" ? 1 : -1;
     paragraph.classList.add(leftOrRight);
     setTimeout(function(){
       currentCard.current++;
       setCard(companiesElems[currentCard.current]);
       paragraph.classList.remove(leftOrRight);
+      setMoneyFill(moneyFill + sign * fillStep);
+      renderFill();
     }, 1450);
+  }
+
+  function renderFill() {
+    let filler = document.getElementById("avatar-icon");
+    filler.style.fill = "white";
   }
 
 
