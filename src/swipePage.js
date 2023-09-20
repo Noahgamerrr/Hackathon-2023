@@ -35,8 +35,8 @@ function SwipePage() {
           {card}
         </div>
         <div id='buttons'>
-          <button type='button' id='decline-button' onClick={() => spawnCard("slideLeft")}><img src='./assets/images/decline.png' width='40px' height='40px' class='imageClass' alt='avatar'></img></button>
-          <button type='button' id='accept-button' onClick={() => spawnCard("slideRight")}><img src='./assets/images/hakchen.png' width='40px' height='40px' class='imageClass' alt='avatar'></img></button>
+          <button type='button' id='decline-button' onClick={() => spawnCard("slideLeft")}><img src='./assets/images/decline.png' width='60px' height='60px' class='imageClass' alt='avatar'></img></button>
+          <button type='button' id='accept-button' onClick={() => spawnCard("slideRight")}><img src='./assets/images/hakchen.png' width='63px' height='63px' class='imageClass' alt='avatar'></img></button>
         </div>
         <div id='select_site'>
           <img src='./assets/images/benutzer-avatar.png' width='50px' height='50px' alt='avatar' id='avatar-icon'></img>
