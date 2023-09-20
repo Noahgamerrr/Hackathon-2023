@@ -10,15 +10,17 @@ function SwipePage() {
 
   React.useEffect(() => {}, [])
 
-  function spawnCard() {
+  function spawnCard(leftOrRight) {
     let paragraph = document.getElementById('cCard');
-    paragraph.classList.add('slideRight');
+    paragraph.classList.add(leftOrRight);
     setTimeout(function(){
       currentCard.current++;
       setCard(companiesElems[currentCard.current]);
-      paragraph.classList.remove('slideRight');
-    }, 1900);
+      paragraph.classList.remove(leftOrRight);
+    }, 1450);
   }
+
+
 
   return (
     <div className="App">
@@ -29,12 +31,12 @@ function SwipePage() {
         <img src='./assets/images/dollar-wahrungszeichen.png' width='50px' height='50px' alt='avatar' id='avatar-icon'></img>
         <img src='./assets/images/computer-science.png' width='50px' height='50px' alt='avatar' id='chat-icon'></img>
         </div>
-        <div id="card-div" onClick={spawnCard}>
+        <div id="card-div">
           {card}
         </div>
         <div id='buttons'>
-          <button type='button' id='decline-button'><img src='./assets/images/decline.png' width='40px' height='40px' class='imageClass' alt='avatar'></img></button>
-          <button type='button' id='accept-button'><img src='./assets/images/hakchen.png' width='40px' height='40px' class='imageClass' alt='avatar'></img></button>
+          <button type='button' id='decline-button' onClick={() => spawnCard("slideLeft")}><img src='./assets/images/decline.png' width='40px' height='40px' class='imageClass' alt='avatar'></img></button>
+          <button type='button' id='accept-button' onClick={() => spawnCard("slideRight")}><img src='./assets/images/hakchen.png' width='40px' height='40px' class='imageClass' alt='avatar'></img></button>
         </div>
         <div id='select_site'>
           <img src='./assets/images/benutzer-avatar.png' width='50px' height='50px' alt='avatar' id='avatar-icon'></img>
