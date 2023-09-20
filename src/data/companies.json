@@ -3,7 +3,7 @@
         "id": 1,
         "position": "Data Analysist",
         "img": "kelag.png",
-        "desired-skills": [
+        "skills": [
             "energy-supply",
             "sql",
             "python",
@@ -14,19 +14,19 @@
         "id": 2,
         "position": "Consultant",
         "img": "sparkasse-kärnten.jpg",
-        "desired-skills": [
+        "skills": [
             "accounting",
-            "customer service",
-            "good mood",
-            "patient"
+            "customer-service",
+            "IT",
+            "social"
         ]
     },
     {
         "id": 3,
         "position": "Cloud manager",
         "img": "eviden.png",
-        "desired-skills": [
-            "Cloud-Computing",
+        "skills": [
+            "cloud-computing",
             "cyber-security",
             "curious",
             "AI"
@@ -36,7 +36,7 @@
         "id": 4,
         "position": "Woodworker",
         "img": "hasslacher.png",
-        "desired-skills": [
+        "skills": [
             "woodcraft",
             "teamwork",
             "internationality",
