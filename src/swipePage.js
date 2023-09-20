@@ -7,11 +7,12 @@ function SwipePage() {
   let companiesElems = companies.map(comp => <CompanyCard item={comp}/>);
   let currentCard = React.useRef(0);
   let [card, setCard] = React.useState(companiesElems[currentCard.current]);
-
-  React.useEffect(() => {}, [])
+  let countCompanies = companies.length;
+  let [moneyFill, setMoneyFill] = React.useState(0);
 
   function spawnCard(leftOrRight) {
     let paragraph = document.getElementById('cCard');
+    let positive = leftOrRight == "slideRight";
     paragraph.classList.add(leftOrRight);
     setTimeout(function(){
       currentCard.current++;
