@@ -33,7 +33,7 @@ function SwipePage() {
   function renderFill() {
     let fillers = document.getElementsByClassName("progress");
     for (let filler = 0; filler < fillers.length; filler++) {
-      fillers[filler].style.background = `linear-gradient(to right, green ${skillsFill.current[filler]}%, lightgrey ${skillsFill.current[filler]}%, lightgrey 100%)`;
+      fillers[filler].style.background = `linear-gradient(to right, green ${skillsFill.current[filler]}%, #defcdf ${skillsFill.current[filler]}%, #defcdf 100%)`;
     }
   }
 
