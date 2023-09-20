@@ -31,11 +31,11 @@ function SwipePage() {
   function renderFill() {
     let fillers = document.getElementsByClassName("progress");
     for (let filler = 0; filler < fillers.length; filler++) {
-      //fillers[filler].style.background = `linear-gradient(to top, ${skillsFill.current[filler] > 0 ? "green" : "red"} ${Math.abs(skillsFill.current[filler])}%, grey ${Math.abs(skillsFill.current[filler])}%, grey 100%)`;
+      //fillers[filler].style.background = `linear-gradient(to top, ${skillsFill.current[filler] > 0 ? "green" : "red"} ${Math.abs(skillsFill.current[filler])}%, lightgrey ${Math.abs(skillsFill.current[filler])}%, lightgrey 100%)`;
       let absSkill = 50 - skillsFill.current[filler];
       let colour = parseInt(absSkill / 20);
-      if (absSkill > 50) fillers[filler].style.background = `linear-gradient(to bottom, grey 0%, grey 50%, ${colourCode[colour]} 50%, ${colourCode[colour]} ${absSkill}%, grey ${absSkill}%, grey 100%)`
-      else fillers[filler].style.background = `linear-gradient(to bottom, grey 0%, grey ${absSkill}%, ${colourCode[colour]} ${absSkill}%, ${colourCode[colour]} 50%, grey 50%, grey 100%)`
+      if (absSkill > 50) fillers[filler].style.background = `linear-gradient(to bottom, lightgrey 0%, lightgrey 50%, ${colourCode[colour]} 50%, ${colourCode[colour]} ${absSkill}%, lightgrey ${absSkill}%, lightgrey 100%)`
+      else fillers[filler].style.background = `linear-gradient(to bottom, lightgrey 0%, lightgrey ${absSkill}%, ${colourCode[colour]} ${absSkill}%, ${colourCode[colour]} 50%, lightgrey 50%, lightgrey 100%)`
     }
   }
 
