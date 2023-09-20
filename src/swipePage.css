@@ -99,10 +99,6 @@ main{
   row-gap: 16%;
 }
 
-.trophies:hover {
-  opacity: 10%;
-}
-
 .trophy {
   width: 50%;
   margin: auto;
