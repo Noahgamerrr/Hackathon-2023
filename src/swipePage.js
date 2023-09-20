@@ -28,8 +28,8 @@ function SwipePage() {
       </header>
       <main>
         <div id='skills_placeholder'>
-        <img src='./assets/images/dollar-wahrungszeichen.png' width='50px' height='50px' alt='avatar' id='avatar-icon'></img>
-        <img src='./assets/images/computer-science.png' width='50px' height='50px' alt='avatar' id='chat-icon'></img>
+        <img src='./assets/images/dollar-wahrungszeichen.png' height='60%' alt='avatar' id='avatar-icon'></img>
+        <img src='./assets/images/computer-science.png' height='60%' alt='avatar' id='chat-icon'></img>
         </div>
         <div id="card-div">
           {card}
