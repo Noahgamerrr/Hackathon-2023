@@ -12,8 +12,7 @@ main{
   width: 30%;
 }
 
-#skills_placeholder, #select_site{
-  
+#skills_placeholder, #select_site {
   height: 8%;
   width: 100%;
   display: flex;
@@ -42,17 +41,23 @@ main{
 }
 
 .img-container {
-  display: flex;
   height: 60%;
-  justify-content: space-between;
+}
+
+.career-paths {
+  display: block;
+  margin: auto;
 }
 
 .progress {
-  width: 0.3vw;
-  margin-right: 0.5vw;
-  height: 100%;
+  width: 200%;
+  height: 2vh;
   border-radius: 10px;
+  position: relative;
+  left: -45%;
   border: 1px solid black;
+  text-align: center;
+  line-height: 70%;
 }
 
 @keyframes swipeRight{
@@ -127,22 +132,16 @@ main{
 
 
 #accept-button{
-  height: 70%;
-  width: 10%;
   padding: 0px;
   float: right;
   margin-right: 30%;
-  margin-top: 2%;
   background-color: lightgray;
   border: none;
 }
 
 #decline-button{
-  height: 70%;
-  width: 10%;
   padding: 0px;
   margin-left: 30%;
-  margin-top: 2%;
   background-color: lightgrey;
   border: none;
 }
@@ -152,6 +151,21 @@ main{
   bottom: 10%
 }
 
+.interest {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
 .imageClass{
   margin: auto;
+}
+
+#hide-card {
+  position: fixed;
+  width: 50vw;
+  height: 100vh;
+  background-color: white;
+  top: 0;
+  left: 30%;
 }

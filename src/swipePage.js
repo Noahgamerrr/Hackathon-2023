@@ -19,6 +19,8 @@ function SwipePage() {
     setTimeout(function() {
       for (let skill in companies[currentCard.current].careerImpact) {
         skillsFill.current[skill] += companies[currentCard.current].careerImpact[skill] * sign;
+        if (skillsFill.current[skill] < 0) skillsFill.current[skill] = 0;
+        else if (skillsFill.current[skill] > 100) skillsFill.current[skill] = 100;
       }
       currentCard.current++;
       setCard(companiesElems[currentCard.current]);
@@ -31,11 +33,7 @@ function SwipePage() {
   function renderFill() {
     let fillers = document.getElementsByClassName("progress");
     for (let filler = 0; filler < fillers.length; filler++) {
-      //fillers[filler].style.background = `linear-gradient(to top, ${skillsFill.current[filler] > 0 ? "green" : "red"} ${Math.abs(skillsFill.current[filler])}%, lightgrey ${Math.abs(skillsFill.current[filler])}%, lightgrey 100%)`;
-      let absSkill = 50 - skillsFill.current[filler];
-      let colour = parseInt(absSkill / 20);
-      if (absSkill > 50) fillers[filler].style.background = `linear-gradient(to bottom, lightgrey 0%, lightgrey 50%, ${colourCode[colour]} 50%, ${colourCode[colour]} ${absSkill}%, lightgrey ${absSkill}%, lightgrey 100%)`
-      else fillers[filler].style.background = `linear-gradient(to bottom, lightgrey 0%, lightgrey ${absSkill}%, ${colourCode[colour]} ${absSkill}%, ${colourCode[colour]} 50%, lightgrey 50%, lightgrey 100%)`
+      fillers[filler].style.background = `linear-gradient(to right, green ${skillsFill.current[filler]}%, lightgrey ${skillsFill.current[filler]}%, lightgrey 100%)`;
     }
   }
 
@@ -48,35 +46,45 @@ function SwipePage() {
       <main>
         <div id='skills_placeholder'>
           <div class="img-container">
-            <div class="progress"></div>
-            <img src='./assets/images/career-paths/economics.svg' height="100%" alt='avatar' id='avatar-icon'></img>
+            <img src='./assets/images/career-paths/economics.svg' height="100%" alt='avatar' id='avatar-icon' class="career-paths"></img>
+            <div class="progress">
+              {skillsFill.current[0]}%
+            </div>
           </div>
           <div class="img-container">
-            <div class="progress"></div>
-            <img src='./assets/images/career-paths/IT.svg' height="100%" alt='avatar' id='it-icon'></img>
+            <img src='./assets/images/career-paths/IT.svg' height="100%" alt='avatar' id='it-icon' class="career-paths"></img>
+            <div class="progress">
+              {skillsFill.current[1]}%
+            </div>
           </div>
           <div class="img-container">
-            <div class="progress"></div>
-            <img src='./assets/images/career-paths/social-skills.svg' height="100%" alt='avatar' id='social-icon'></img>
+            <img src='./assets/images/career-paths/social-skills.svg' height="100%" alt='avatar' id='social-icon' class="career-paths"></img>
+            <div class="progress">
+              {skillsFill.current[2]}%
+            </div>
           </div>
           <div class="img-container">
-            <div class="progress"></div>
-            <img src='./assets/images/career-paths/engineering.svg' height="100%" alt='avatar' id='engineer-icon'></img>
+            <img src='./assets/images/career-paths/engineering.svg' height="100%" alt='avatar' id='engineer-icon' class="career-paths"></img>
+            <div class="progress">
+              {skillsFill.current[3]}%
+            </div>
           </div>
         </div>
         <div id="card-div">
           {card}
         </div>
         <div id='buttons'>
-          <button type='button' id='decline-button' onClick={() => clickable.current && spawnCard("slideLeft")}><img src='./assets/images/thumbs_down.png' width='60px' height='60px' class='imageClass' alt='avatar'></img></button>
-          <button type='button' id='accept-button' onClick={() => clickable.current && spawnCard("slideRight")}><img src='./assets/images/icons8-daumen-hoch-96.png' width='60px' height='60px' class='imageClass' alt='avatar'></img></button>
+          <h3 class="interest">Interest?</h3>
+          <button type='button' id='decline-button' onClick={() => clickable.current && spawnCard("slideLeft")}><img src='./assets/images/thumbs_down.png' width='40px' height='40px' class='imageClass' alt='avatar'></img></button>
+          <button type='button' id='accept-button' onClick={() => clickable.current && spawnCard("slideRight")}><img src='./assets/images/icons8-daumen-hoch-96.png' width='40px' height='40px' class='imageClass' alt='avatar'></img></button>
         </div>
         <div id='select_site'>
           <img src='./assets/images/benutzer-avatar.png' width='50px' height='50px' alt='avatar' id='avatar-icon'></img>
           <img src='./assets/images/plaudern.png' width='50px' height='50px' alt='avatar' id='chat-icon'></img>
-          <img src='./assets/images/gambert_small.png' width='50px' height='50px' alt='gambert' id='chat-icon'></img>
+          <img src='./assets/images/gamebert_small.png' width='50px' height='50px' alt='gambert' id='chat-icon'></img>
           <img src='./assets/images/teamwork-team-svgrepo-com.svg' width='50px' height='50px' alt='avatar' id='chat-icon'></img>
         </div>
+        <div id="hide-card"></div>
       </main>
     </div>
   );
