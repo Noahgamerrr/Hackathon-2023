@@ -3,6 +3,7 @@
         "id": 1,
         "position": "Data Analysist",
         "img": "kelag.png",
+        "description": "We are seeking a data analysist able to transform raw SQL-data into a plot using Python",
         "skills": [
             "energy-supply",
             "sql",
@@ -12,8 +13,9 @@
     },
     {
         "id": 2,
-        "position": "Consultant",
+        "position": "Customer Service",
         "img": "sparkasse-kärnten.jpg",
+        "description": "We are hiring someone to help us satisfy the rising demand from our customers",
         "skills": [
             "accounting",
             "customer-service",
@@ -25,6 +27,7 @@
         "id": 3,
         "position": "Cloud manager",
         "img": "eviden.png",
+        "description": "We seek someone willing to manage our Cloud-infrastructure but also implement AI-technology into our ecosystem",
         "skills": [
             "cloud-computing",
             "cyber-security",
@@ -36,6 +39,7 @@
         "id": 4,
         "position": "Woodworker",
         "img": "hasslacher.png",
+        "description": "We are hiring a woodworker willing to work abroad on our projects",
         "skills": [
             "woodcraft",
             "teamwork",
