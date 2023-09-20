@@ -71,6 +71,8 @@ function SwipePage() {
         <div id='select_site'>
           <img src='./assets/images/benutzer-avatar.png' width='50px' height='50px' alt='avatar' id='avatar-icon'></img>
           <img src='./assets/images/plaudern.png' width='50px' height='50px' alt='avatar' id='chat-icon'></img>
+          <img src='./assets/images/gambert_small.png' width='50px' height='50px' alt='gambert' id='chat-icon'></img>
+          <img src='./assets/images/teamwork-team-svgrepo-com.svg' width='50px' height='50px' alt='avatar' id='chat-icon'></img>
         </div>
       </main>
     </div>
