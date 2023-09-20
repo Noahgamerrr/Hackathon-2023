@@ -24,7 +24,7 @@ function SwipePage() {
       setCard(companiesElems[currentCard.current]);
       paragraph.classList.remove(leftOrRight);
       renderFill();
-      clickable.current = true;
+      clickable.current = currentCard.current < companies.length;
     }, 1450);
   }
 
